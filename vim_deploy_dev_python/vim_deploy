@@ -1,0 +1,27 @@
+# Установка ПО
+apt update && apt-get install -y curl git vim-nox tmux python3 python3-pip universal-ctags build-essential cmake python3-dev
+
+
+# Установка YouComplitMe
+#curl -sL https://deb.nodesource.com/setup_8.x | bash -
+#apt install -y nodejs npm vim-youcompleteme
+#cd ~/.vim/plugged/YouCompleteMe
+#python3 ./install.py --java-completer --ts-completer
+
+# Установка plug
+mkdir ~/.vim/autoload
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+cp ./ctags ~/.ctags
+ctags -R
+
+
+# Копирование стандартного преднастроенного .vimrc
+cp ./vimrc_template ~/.vimrc
+
+# Запустить vim и установить плагины
+vim -c PlugInstall
+
+# Установка темы darcula
+mkdir ~/.vim/colors
+cp ~/.vim/plugged/darcula/colors/darcula.vim ~/.vim/colors

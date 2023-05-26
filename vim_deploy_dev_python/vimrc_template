@@ -1,0 +1,38 @@
+set number
+
+set tabstop=4
+set expandtab
+set sw=4
+
+set hlsearch
+
+set mouse=a
+
+syntax enable
+
+set foldmethod=manual
+set fileencodings=utf8,cp1251
+set t_Co=256
+
+colorscheme  darcula
+
+""" Секция плагинов """
+call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs'
+Plug 'bling/vim-airline'
+Plug 'blueshirts/darcula'
+Plug 'majutsushi/tagbar'
+Plug 'mtscout6/vim-tagbar-css'
+Plug 'davidhalter/jedi-vim'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'tmhedberg/SimpylFold'
+Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+#Plug 'ycm-core/YouCompleteMe'
+call plug#end()
+
+map <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+
+
+

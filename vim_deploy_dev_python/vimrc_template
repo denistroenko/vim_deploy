@@ -28,7 +28,7 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-#Plug 'ycm-core/YouCompleteMe'
+"""Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 map <F7> :NERDTreeToggle<CR>
